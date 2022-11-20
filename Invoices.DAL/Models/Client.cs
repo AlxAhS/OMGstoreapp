@@ -11,10 +11,13 @@ namespace Invoices.DAL.Models
 {
     public class Client
     {
-        [Key]
-        public string ClientID { get; set; }
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ClientID { get; set; }
+        [Column(TypeName = "nvarchar(25)")]
+        //Todo: Add document type enum (CC,CE, NIT, TI etc..)
+        public string? DocumentID { get; set; }
        
         [Column(TypeName = "nvarchar(100)")]
-        public string ClientName { get; set; }
+        public string? ClientName { get; set; }
     }
 }
