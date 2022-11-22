@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WKDfBsUb2I5FHIHhXmilY+Ij3s1ANJX03reB3qt1B2v4yb37uROnfxeTMEXsvEgtRM/DEuq75TvgwIeo02o2kQ==",
+  "dgSpecHash": "fU7ZJtLNyVnoaSCgyKmvE0GO697dT+RtGoLQrQxu793qTEdVIfWhYqY+OSmnvH9sjsUEiok7gjmXFgWA9U466w==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj",
+  "projectFilePath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\work_AhT\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\work_AhT\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj",
+      "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj",
       "projectName": "Invoices.DTO",
-      "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj",
+      "projectPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj",
       "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\obj\\",
+      "outputPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",

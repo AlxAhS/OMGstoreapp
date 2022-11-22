@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using DAL.DataContext;
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -8,6 +11,22 @@ internal class Program
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+
+            //Configure SQL server
+        builder.Services.AddDbContext<DatabaseContext>
+            (
+            options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            }
+            );
+
+
+
+
+
+
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 

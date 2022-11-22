@@ -1182,7 +1182,6 @@
         "dependencies": {
           "Invoices.DTO": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
           "Microsoft.Extensions.Configuration": "7.0.0"
         },
         "compile": {
@@ -3604,11 +3603,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\OMGSupply\\Invoices.BL\\Invoices.BL.csproj",
+      "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj",
       "projectName": "Invoices.BL",
-      "projectPath": "C:\\Dev\\OMGSupply\\Invoices.BL\\Invoices.BL.csproj",
+      "projectPath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj",
       "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\OMGSupply\\Invoices.BL\\obj\\",
+      "outputPath": "C:\\Dev\\OMGstore\\Invoices.BL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3625,11 +3624,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Dev\\OMGSupply\\Invoices.DAL\\Invoices.DAL.csproj": {
-              "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DAL\\Invoices.DAL.csproj"
+            "C:\\Dev\\OMGstore\\Invoices.DAL\\Invoices.DAL.csproj": {
+              "projectPath": "C:\\Dev\\OMGstore\\Invoices.DAL\\Invoices.DAL.csproj"
             },
-            "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj": {
-              "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj"
+            "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj": {
+              "projectPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj"
             }
           }
         }

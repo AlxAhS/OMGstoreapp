@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\OMGSupply\\Invoices.API\\Invoices.API.csproj": {}
+    "C:\\Dev\\OMGstore\\Invoices.API\\Invoices.API.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\OMGSupply\\Invoices.API\\Invoices.API.csproj": {
+    "C:\\Dev\\OMGstore\\Invoices.API\\Invoices.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGSupply\\Invoices.API\\Invoices.API.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.API\\Invoices.API.csproj",
         "projectName": "Invoices.API",
-        "projectPath": "C:\\Dev\\OMGSupply\\Invoices.API\\Invoices.API.csproj",
+        "projectPath": "C:\\Dev\\OMGstore\\Invoices.API\\Invoices.API.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGSupply\\Invoices.API\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstore\\Invoices.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\OMGSupply\\Invoices.BL\\Invoices.BL.csproj": {
-                "projectPath": "C:\\Dev\\OMGSupply\\Invoices.BL\\Invoices.BL.csproj"
+              "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj"
               },
-              "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj": {
-                "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj"
+              "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj"
               }
             }
           }
@@ -60,6 +60,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -89,14 +93,14 @@
         }
       }
     },
-    "C:\\Dev\\OMGSupply\\Invoices.BL\\Invoices.BL.csproj": {
+    "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGSupply\\Invoices.BL\\Invoices.BL.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj",
         "projectName": "Invoices.BL",
-        "projectPath": "C:\\Dev\\OMGSupply\\Invoices.BL\\Invoices.BL.csproj",
+        "projectPath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGSupply\\Invoices.BL\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstore\\Invoices.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -113,11 +117,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\OMGSupply\\Invoices.DAL\\Invoices.DAL.csproj": {
-                "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DAL\\Invoices.DAL.csproj"
+              "C:\\Dev\\OMGstore\\Invoices.DAL\\Invoices.DAL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstore\\Invoices.DAL\\Invoices.DAL.csproj"
               },
-              "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj": {
-                "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj"
+              "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj"
               }
             }
           }
@@ -167,14 +171,14 @@
         }
       }
     },
-    "C:\\Dev\\OMGSupply\\Invoices.DAL\\Invoices.DAL.csproj": {
+    "C:\\Dev\\OMGstore\\Invoices.DAL\\Invoices.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGSupply\\Invoices.DAL\\Invoices.DAL.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.DAL\\Invoices.DAL.csproj",
         "projectName": "Invoices.DAL",
-        "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DAL\\Invoices.DAL.csproj",
+        "projectPath": "C:\\Dev\\OMGstore\\Invoices.DAL\\Invoices.DAL.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGSupply\\Invoices.DAL\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstore\\Invoices.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -191,8 +195,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj": {
-                "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj"
+              "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj"
               }
             }
           }
@@ -208,16 +212,6 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.0, )"
             },
@@ -246,14 +240,14 @@
         }
       }
     },
-    "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj": {
+    "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj",
         "projectName": "Invoices.DTO",
-        "projectPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\Invoices.DTO.csproj",
+        "projectPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGSupply\\Invoices.DTO\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
