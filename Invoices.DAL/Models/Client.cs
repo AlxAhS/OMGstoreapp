@@ -9,22 +9,24 @@ using System.Threading.Tasks;
 
 namespace Invoices.DAL.Models
 {
+    enum SelectDocument
+    { CC, CE, TI, RC, Passport, NIT, Other, };
+
     public class Client
     {
+
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ClientID { get; set; }
 
         //To do: Add document type enum (CC,CE, NIT, TI etc..)
-        [Column(TypeName = "nvarchar(3)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string? DocumentType { get; set; }
-
 
         [Column(TypeName = "nvarchar(25)")]
         public string? DocumentID { get; set; }
-       
-
 
         [Column(TypeName = "nvarchar(100)")]
         public string? ClientName { get; set; }
+       
     }
 }

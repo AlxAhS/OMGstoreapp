@@ -56,7 +56,7 @@ namespace Invoices.DAL.Migrations
                         .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("DocumentType")
-                        .HasColumnType("nvarchar(3)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("ClientID");
 

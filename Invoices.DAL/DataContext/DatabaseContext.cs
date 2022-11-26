@@ -10,24 +10,26 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.DataContext
-{ 
+{
 
     public class DatabaseContext : DbContext
     {
 
+       
+
         public DatabaseContext()
         {
-
         }
 
-        public DatabaseContext(DbContextOptions options) : base(options)
-        {
-
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) 
+        { 
+        
         }
+              
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Product> Products { get; set; }
-
+    
     }
 }
