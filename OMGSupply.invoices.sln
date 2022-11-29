@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.DAL", "Invoices.DA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.API", "Invoices.API\Invoices.API.csproj", "{F7DA81AE-17D7-46D2-879F-3FA021B74807}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.BLL", "Invoices.BL\Invoices.BLL.csproj", "{0FCED1F0-D41F-42D7-9F50-2E908D8A4355}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.BL", "Invoices.BL\Invoices.BL.csproj", "{0FCED1F0-D41F-42D7-9F50-2E908D8A4355}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.DTO", "Invoices.DTO\Invoices.DTO.csproj", "{CAE22D5E-88C5-41CB-B5D5-CF755A50F31C}"
 EndProject

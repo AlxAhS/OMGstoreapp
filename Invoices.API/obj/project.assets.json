@@ -4076,7 +4076,7 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "Invoices.BLL/1.0.0": {
+      "Invoices.BL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -4088,10 +4088,10 @@
           "itext7.pdfhtml": "4.0.4"
         },
         "compile": {
-          "bin/placeholder/Invoices.BLL.dll": {}
+          "bin/placeholder/Invoices.BL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Invoices.BLL.dll": {}
+          "bin/placeholder/Invoices.BL.dll": {}
         }
       },
       "Invoices.DAL/1.0.0": {
@@ -11505,10 +11505,10 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "Invoices.BLL/1.0.0": {
+    "Invoices.BL/1.0.0": {
       "type": "project",
-      "path": "../Invoices.BL/Invoices.BLL.csproj",
-      "msbuildProject": "../Invoices.BL/Invoices.BLL.csproj"
+      "path": "../Invoices.BL/Invoices.BL.csproj",
+      "msbuildProject": "../Invoices.BL/Invoices.BL.csproj"
     },
     "Invoices.DAL/1.0.0": {
       "type": "project",
@@ -11523,7 +11523,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Invoices.BLL >= 1.0.0",
+      "Invoices.BL >= 1.0.0",
       "Invoices.DTO >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
@@ -11561,8 +11561,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BLL.csproj": {
-              "projectPath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BLL.csproj"
+            "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj": {
+              "projectPath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj"
             },
             "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj": {
               "projectPath": "C:\\Dev\\OMGstore\\Invoices.DTO\\Invoices.DTO.csproj"

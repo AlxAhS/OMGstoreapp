@@ -9,11 +9,12 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
-using DAL.Models;
-using Invoices.DAL.Models;
+using iText.IO.Image;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using DAL.Models;
 using DAL.DataContext;
+using Invoices.DAL.Models;
 
 namespace Invoices.BLL
 {
@@ -26,10 +27,10 @@ namespace Invoices.BLL
         public void Exportpdf()
         {
             string desktop_Path = Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory);
-            string new_Path = desktop_Path + "\\OMG_invoices";
+            string new_Path = desktop_Path + "\\OMG_bills";
             Directory.CreateDirectory(new_Path);
 
-            string fileName = new_Path + "\\OMG-invoice-" + Convert.ToString(invoice.InvoiceDate) + Convert.ToString(invoice.InvoiceID) + ".pdf";
+            string fileName = new_Path + "\\OMG_Cuentadecobro_" + Convert.ToString(client.ClientID) + ".pdf";
 
 
             // Must have write permissions to the path folder
@@ -37,7 +38,10 @@ namespace Invoices.BLL
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-            LineSeparator ls = new LineSeparator(new SolidLine());
+            Paragraph Text1 = new Paragraph(
+            "Fecha: " + invoice.InvoiceDate+ "\nCuenta de cobro N°: " + invoice.InvoiceNumber)
+               .SetTextAlignment(TextAlignment.RIGHT)
+               .SetFontSize(10);
 
             Paragraph header = new Paragraph("OMG IMPORTS")
                .SetTextAlignment(TextAlignment.CENTER)
@@ -48,14 +52,10 @@ namespace Invoices.BLL
                .SetTextAlignment(TextAlignment.CENTER)
                .SetFontSize(15);
 
-            LineSeparator ls2 = new LineSeparator(new SolidLine());
+            LineSeparator ls = new LineSeparator(new SolidLine());
 
-            Paragraph Text1 = new Paragraph(
-            "\nFecha: " + invoice.InvoiceDate + "\nCuenta de cobro N°: " + invoice.InvoiceID + "\n\n")
-               .SetTextAlignment(TextAlignment.LEFT)
-               .SetFontSize(14);
 
-            Paragraph Text2 = new Paragraph(
+            Paragraph Text2 = new Paragraph("\n" +
                 client.ClientName)
                .SetTextAlignment(TextAlignment.CENTER)
                .SetBold()
@@ -64,12 +64,12 @@ namespace Invoices.BLL
             Paragraph Text3 = new Paragraph(
                 Convert.ToString(client.ClientID))
                .SetTextAlignment(TextAlignment.CENTER)
-               .SetFontSize(14);
+               .SetFontSize(12);
 
             Paragraph Text4 = new Paragraph(
             "\nDebe a:")
                .SetTextAlignment(TextAlignment.CENTER)
-               .SetFontSize(14);
+               .SetFontSize(12);
 
             Paragraph Text5 = new Paragraph(
             "JOSE GABRIEL AHUMADA SOTO")
@@ -82,39 +82,38 @@ namespace Invoices.BLL
             "\nCra 57 # 27-25, Bello Antioquia" +
             "\n3127694461\n\n")
             .SetTextAlignment(TextAlignment.CENTER)
-            .SetFontSize(14);
+            .SetFontSize(12);
 
             Paragraph Text7 = new Paragraph(
-            "\nLa suma de $" + product.ProductValue + " por concepto de " + product.ProductDescription + ".\n")
+            "La suma de $" + product.ProductValue + " por concepto de " + product.ProductDescription + ".")
             .SetTextAlignment(TextAlignment.JUSTIFIED)
             .SetFontSize(12);
 
-            Paragraph Text8 = new Paragraph(
-            "\nPara efectos de retención en la fuente declaro que pertenezco a la categoría de empleado. El 80% de mis ingresos o más, provienen de ejercer mi actividad como empleado y como independiente, además soy declarante de impuesto de renta. \n\n\n\n")
-            .SetTextAlignment(TextAlignment.JUSTIFIED)
-            .SetFontSize(12);
+            Paragraph Text8 = new Paragraph("\nPara efectos de retención en la fuente declaro que pertenezco a la categoría de empleado. El 80% de mis ingresos o más, provienen de ejercer mi actividad como empleado y como independiente, además soy declarante de impuesto de renta.").SetTextAlignment(TextAlignment.JUSTIFIED);
 
-            Paragraph Text9 = new Paragraph(
-            "Favor pagar a nombre de ")
-            .SetTextAlignment(TextAlignment.CENTER)
-            .SetFontSize(12);
+            Paragraph Text9 = new Paragraph("\n\nFavor pagar a nombre de ").SetTextAlignment(TextAlignment.CENTER).SetFontSize(10);
 
-            Paragraph Text10 = new Paragraph(
-            "JOSE GABRIEL AHUMADA SOTO ")
-            .SetTextAlignment(TextAlignment.CENTER)
-            .SetBold()
+            Paragraph Text10 = new Paragraph("JOSE GABRIEL AHUMADA SOTO ").SetTextAlignment(TextAlignment.CENTER)
             .SetFontSize(14);
 
-            Paragraph Text11 = new Paragraph(
-            "por el medio de pago más conveniente.")
-            .SetTextAlignment(TextAlignment.CENTER)
-            .SetFontSize(12);
+            Paragraph Text11 = new Paragraph("por el medio de pago más conveniente.\n\n\n").SetTextAlignment(TextAlignment.CENTER).SetFontSize(10);
+
+            string signaturePath = Environment.CurrentDirectory;
+            Image img = new Image(ImageDataFactory
+               .Create(signaturePath + "\\jahusosign.png"))
+               .SetTextAlignment(TextAlignment.CENTER)
+               .ScaleAbsolute(150, 35);
+            //.SetFixedPosition(1, 25, 25);
+
+            Paragraph Text12 = new Paragraph("_____________________________" + "\nJOSE GABRIEL AHUMADA SOTO" + "\nCC 98715623").SetTextAlignment(TextAlignment.LEFT);
+
 
             //Final form: Text structure
+            document.Add(ls);
+            document.Add(Text1);
             document.Add(header);
             document.Add(subheader);
             document.Add(ls);
-            document.Add(Text1);
             document.Add(Text2);
             document.Add(Text3);
             document.Add(Text4);
@@ -125,7 +124,8 @@ namespace Invoices.BLL
             document.Add(Text9);
             document.Add(Text10);
             document.Add(Text11);
-
+            document.Add(img);
+            document.Add(Text12);
             document.Close();
         }
 

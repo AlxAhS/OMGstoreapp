@@ -14,7 +14,6 @@ namespace Invoices.DAL.Models
 
     public class Client
     {
-
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ClientID { get; set; }
 
@@ -27,6 +26,5 @@ namespace Invoices.DAL.Models
 
         [Column(TypeName = "nvarchar(100)")]
         public string? ClientName { get; set; }
-       
     }
 }

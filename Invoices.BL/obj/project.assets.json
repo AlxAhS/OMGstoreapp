@@ -6579,9 +6579,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BLL.csproj",
-      "projectName": "Invoices.BLL",
-      "projectPath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BLL.csproj",
+      "projectUniqueName": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj",
+      "projectName": "Invoices.BL",
+      "projectPath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj",
       "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
       "outputPath": "C:\\Dev\\OMGstore\\Invoices.BL\\obj\\",
       "projectStyle": "PackageReference",

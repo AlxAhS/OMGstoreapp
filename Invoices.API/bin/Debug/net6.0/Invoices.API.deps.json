@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Invoices.API/1.0.0": {
         "dependencies": {
-          "Invoices.BLL": "1.0.0",
+          "Invoices.BL": "1.0.0",
           "Invoices.DTO": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
@@ -2655,7 +2655,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Invoices.BLL/1.0.0": {
+      "Invoices.BL/1.0.0": {
         "dependencies": {
           "Invoices.DAL": "1.0.0",
           "Invoices.DTO": "1.0.0",
@@ -2665,7 +2665,7 @@
           "itext7.pdfhtml": "4.0.4"
         },
         "runtime": {
-          "Invoices.BLL.dll": {}
+          "Invoices.BL.dll": {}
         }
       },
       "Invoices.DAL/1.0.0": {
@@ -4106,7 +4106,7 @@
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
-    "Invoices.BLL/1.0.0": {
+    "Invoices.BL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

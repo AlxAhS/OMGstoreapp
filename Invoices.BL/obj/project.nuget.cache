@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XFaOnJzy25/0mSSLgMoY3F+8aCOGENo2V750j7tCeOScPALTv1qAzy3kjBP6Ax97Yx+F/Kz0WTeb5iZjjWWngg==",
+  "dgSpecHash": "E5Kuj7zl1JGX1Y9XoATEmlkcS3Xg+QkxK4C5GDC5iBWvXu5gnvCR047NUj0KOn3RRiDjXf7uAzR+e2E/a5yo9g==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BLL.csproj",
+  "projectFilePath": "C:\\Dev\\OMGstore\\Invoices.BL\\Invoices.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\work_AhT\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\work_AhT\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
