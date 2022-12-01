@@ -31,7 +31,7 @@ namespace Invoices.DAL.Migrations
 
                     b.Property<string>("InvoiceDate")
                         .IsRequired()
-                        .HasColumnType("nvarchar(16)");
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("InvoiceNumber")
                         .HasColumnType("nvarchar(10)");

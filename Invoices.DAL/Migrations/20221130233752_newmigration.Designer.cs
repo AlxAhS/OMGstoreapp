@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Invoices.DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221125210500_initialmigration")]
-    partial class initialmigration
+    [Migration("20221130233752_newmigration")]
+    partial class newmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,7 +34,7 @@ namespace Invoices.DAL.Migrations
 
                     b.Property<string>("InvoiceDate")
                         .IsRequired()
-                        .HasColumnType("nvarchar(16)");
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("InvoiceNumber")
                         .HasColumnType("nvarchar(10)");

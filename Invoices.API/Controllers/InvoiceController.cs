@@ -87,10 +87,16 @@ namespace Invoices.API.Controllers
             {
                 return Problem("Entity set 'DatabaseContext.Invoices'  is null.");
             }
+             
+            invoiceInfo.InvoiceDate = DateTime.Now;
+
             _contextInv.Invoices.Add(invoiceInfo);
             await _contextInv.SaveChangesAsync();
 
-            return CreatedAtAction("GetInvoices", new { id = invoiceInfo.InvoiceID }, invoiceInfo);
+            return CreatedAtAction(
+                "GetInvoices", 
+                new { id = invoiceInfo.InvoiceID, datetime = invoiceInfo.InvoiceDate},
+                invoiceInfo);
         }
 
 

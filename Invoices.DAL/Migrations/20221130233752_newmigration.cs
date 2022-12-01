@@ -5,7 +5,7 @@
 namespace Invoices.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class initialmigration : Migration
+    public partial class newmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,7 +31,7 @@ namespace Invoices.DAL.Migrations
                 {
                     InvoiceID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    InvoiceDate = table.Column<string>(type: "nvarchar(16)", nullable: false),
+                    InvoiceDate = table.Column<string>(type: "nvarchar(30)", nullable: false),
                     InvoiceNumber = table.Column<string>(type: "nvarchar(10)", nullable: true)
                 },
                 constraints: table =>

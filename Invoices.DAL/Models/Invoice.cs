@@ -22,11 +22,7 @@ namespace DAL.Models
         [Column(TypeName = "nvarchar(10)")]
         public string? InvoiceNumber { get; set; }
 
-        public void SqlDateTime()
-        {
-            DateTime myDateTime = DateTime.Now;
-            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
-        }
+        
 
     }
 }
