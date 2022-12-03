@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 
 namespace Invoices.DAL.Models
 {
-    enum SelectDocument
-    { CC, CE, TI, RC, Passport, NIT, Other, };
+  
 
     public class Client
     {

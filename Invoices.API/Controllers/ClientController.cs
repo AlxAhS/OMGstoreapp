@@ -77,6 +77,8 @@ namespace Invoices.API.Controllers
             return NoContent();
         }
 
+        //enum SelectDocument
+        //{ CC, CE, TI, RC, Passport, NIT, Other, };
 
         // POST: api/Clients
         [HttpPost]
@@ -89,7 +91,9 @@ namespace Invoices.API.Controllers
             _contextCli.Clients.Add(clientInfo);
             await _contextCli.SaveChangesAsync();
 
-            return CreatedAtAction("GetClients", new { id = clientInfo.ClientID }, clientInfo);
+            //clientInfo.DocumentType = SelectDocument();
+
+            return CreatedAtAction("GetClients", new { id = clientInfo.ClientID, /*document = clientInfo.DocumentType*/ }, clientInfo);
         }
 
 
