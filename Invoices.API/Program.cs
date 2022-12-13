@@ -9,6 +9,14 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.Services.AddCors(options =>
+
+    options.AddPolicy(name: "corsApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+    }));
+
+
         // Add services to the container.
 
         builder.Services.AddControllers();
@@ -41,6 +49,15 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+        app.UseRouting();
+
+        //app cors
+        app.UseCors("corsApp");
+
+
 
         app.UseAuthorization();
 
