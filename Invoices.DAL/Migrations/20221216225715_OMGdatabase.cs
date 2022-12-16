@@ -5,7 +5,7 @@
 namespace Invoices.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class newmigration : Migration
+    public partial class OMGdatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,43 +14,45 @@ namespace Invoices.DAL.Migrations
                 name: "Clients",
                 columns: table => new
                 {
-                    ClientID = table.Column<int>(type: "int", nullable: false)
+                    ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DocumentType = table.Column<string>(type: "nvarchar(10)", nullable: true),
-                    DocumentID = table.Column<string>(type: "nvarchar(25)", nullable: true),
-                    ClientName = table.Column<string>(type: "nvarchar(100)", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    DocumentClass = table.Column<string>(type: "nvarchar(6)", nullable: true),
+                    DocumentNumber = table.Column<string>(type: "nvarchar(25)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(40)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(12)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clients", x => x.ClientID);
+                    table.PrimaryKey("PK_Clients", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Invoices",
                 columns: table => new
                 {
-                    InvoiceID = table.Column<int>(type: "int", nullable: false)
+                    ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    InvoiceDate = table.Column<string>(type: "nvarchar(30)", nullable: false),
-                    InvoiceNumber = table.Column<string>(type: "nvarchar(10)", nullable: true)
+                    Date = table.Column<string>(type: "nvarchar(30)", nullable: false),
+                    Serial = table.Column<string>(type: "nvarchar(10)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Invoices", x => x.InvoiceID);
+                    table.PrimaryKey("PK_Invoices", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
-                    ProductID = table.Column<int>(type: "int", nullable: false)
+                    ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductDescription = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    ProductValue = table.Column<string>(type: "nvarchar(20)", nullable: true)
+                    Item = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    Value = table.Column<string>(type: "nvarchar(20)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.ProductID);
+                    table.PrimaryKey("PK_Products", x => x.ID);
                 });
         }
 

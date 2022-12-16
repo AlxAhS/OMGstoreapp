@@ -15,12 +15,12 @@ namespace DAL.Models
     public class Invoice
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int InvoiceID { get; set; }
+        public int ID { get; set; }
         [Column(TypeName = "nvarchar(30)")]
-        public DateTime InvoiceDate { get; set; }
+        public DateTime Date { get; set; }
 
         [Column(TypeName = "nvarchar(10)")]
-        public string? InvoiceNumber { get; set; }
+        public string? Serial { get; set; }
 
         
 

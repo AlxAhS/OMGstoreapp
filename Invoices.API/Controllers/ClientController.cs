@@ -1,5 +1,4 @@
 ﻿using DAL.DataContext;
-using Invoices.API.Data;
 using Invoices.DAL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -52,7 +51,7 @@ namespace Invoices.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutClient(int id, Client clientInfo)
         {
-            if (id != clientInfo.ClientID)
+            if (id != clientInfo.ID)
             {
                 return BadRequest();
             }
@@ -93,7 +92,7 @@ namespace Invoices.API.Controllers
 
             //clientInfo.DocumentType = SelectDocument();
 
-            return CreatedAtAction("GetClients", new { id = clientInfo.ClientID, /*document = clientInfo.DocumentType*/ }, clientInfo);
+            return CreatedAtAction("GetClients", new { id = clientInfo.ID, /*document = clientInfo.DocumentType*/ }, clientInfo);
         }
 
 
@@ -119,7 +118,7 @@ namespace Invoices.API.Controllers
 
         private bool ClientExists(int id)
         {
-            return (_contextCli.Clients?.Any(e => e.ClientID == id)).GetValueOrDefault();
+            return (_contextCli.Clients?.Any(e => e.ID == id)).GetValueOrDefault();
         }
 
     }

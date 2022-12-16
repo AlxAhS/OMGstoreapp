@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using DAL.DataContext;
-using Invoices.API.Data;
-using Invoices.API.Data.Interface;
 
 internal class Program
 {
@@ -21,14 +19,7 @@ internal class Program
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
-
-        //AlxAhS: this is for use Repository ... if we have any error please DELETE. Thanks
-        builder.Services.AddScoped<InterfaceClient, ClientRepository>();
-        builder.Services.AddScoped<InterfaceInvoice, InvoiceRepository>();
-        builder.Services.AddScoped<InterfaceProduct, ProductRepository>();
-
-
+         
         //Configure SQL server
         builder.Services.AddDbContext<DatabaseContext>
             (

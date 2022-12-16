@@ -12,12 +12,12 @@ namespace Invoices.DAL.Models
     public class Product
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ProductID { get; set; }
+        public int ID { get; set; }
         [Column(TypeName = "nvarchar(100)")]
-        public string? ProductDescription { get; set; }
+        public string? Item { get; set; }
         
         [Column(TypeName = "nvarchar(20)")] 
-        public string? ProductValue { get; set; }
+        public string? Value { get; set; }
 
     }
 }

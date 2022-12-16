@@ -1,6 +1,5 @@
 ﻿using DAL.DataContext;
 using DAL.Models;
-using Invoices.API.Data;
 using Invoices.DAL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -53,7 +52,7 @@ namespace Invoices.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutInvoice(int id, Invoice invoiceInfo)
         {
-            if (id != invoiceInfo.InvoiceID)
+            if (id != invoiceInfo.ID)
             {
                 return BadRequest();
             }
@@ -88,14 +87,14 @@ namespace Invoices.API.Controllers
                 return Problem("Entity set 'DatabaseContext.Invoices'  is null.");
             }
              
-            invoiceInfo.InvoiceDate = DateTime.Now;
+            invoiceInfo.Date = DateTime.Now;
 
             _contextInv.Invoices.Add(invoiceInfo);
             await _contextInv.SaveChangesAsync();
 
             return CreatedAtAction(
                 "GetInvoices", 
-                new { id = invoiceInfo.InvoiceID, datetime = invoiceInfo.InvoiceDate},
+                new { id = invoiceInfo.ID, datetime = invoiceInfo.Date},
                 invoiceInfo);
         }
 
@@ -122,7 +121,7 @@ namespace Invoices.API.Controllers
 
         private bool InvoiceExists(int id)
         {
-            return (_contextInv.Invoices?.Any(e => e.InvoiceID== id)).GetValueOrDefault();
+            return (_contextInv.Invoices?.Any(e => e.ID== id)).GetValueOrDefault();
         }
 
     }

@@ -1,6 +1,5 @@
 ﻿using DAL.DataContext;
 using DAL.Models;
-using Invoices.API.Data;
 using Invoices.DAL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -52,7 +51,7 @@ namespace Invoices.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPaymentDetail(int id, Product productInfo)
         {
-            if (id != productInfo.ProductID)
+            if (id != productInfo.ID)
             {
                 return BadRequest();
             }
@@ -89,7 +88,7 @@ namespace Invoices.API.Controllers
             _contextPro.Products.Add(productInfo);
             await _contextPro.SaveChangesAsync();
 
-            return CreatedAtAction("GetProducts", new { id = productInfo.ProductID}, productInfo);
+            return CreatedAtAction("GetProducts", new { id = productInfo.ID}, productInfo);
         }
 
 
@@ -115,7 +114,7 @@ namespace Invoices.API.Controllers
 
         private bool ProductExists(int id)
         {
-            return (_contextPro.Products?.Any(e => e.ProductID == id)).GetValueOrDefault();
+            return (_contextPro.Products?.Any(e => e.ID == id)).GetValueOrDefault();
         }
 
     }

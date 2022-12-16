@@ -23,61 +23,67 @@ namespace Invoices.DAL.Migrations
 
             modelBuilder.Entity("DAL.Models.Invoice", b =>
                 {
-                    b.Property<int>("InvoiceID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InvoiceID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("InvoiceDate")
+                    b.Property<string>("Date")
                         .IsRequired()
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("InvoiceNumber")
+                    b.Property<string>("Serial")
                         .HasColumnType("nvarchar(10)");
 
-                    b.HasKey("InvoiceID");
+                    b.HasKey("ID");
 
                     b.ToTable("Invoices");
                 });
 
             modelBuilder.Entity("Invoices.DAL.Models.Client", b =>
                 {
-                    b.Property<int>("ClientID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClientID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("ClientName")
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<string>("DocumentClass")
+                        .HasColumnType("nvarchar(6)");
 
-                    b.Property<string>("DocumentID")
+                    b.Property<string>("DocumentNumber")
                         .HasColumnType("nvarchar(25)");
 
-                    b.Property<string>("DocumentType")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(40)");
 
-                    b.HasKey("ClientID");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(12)");
+
+                    b.HasKey("ID");
 
                     b.ToTable("Clients");
                 });
 
             modelBuilder.Entity("Invoices.DAL.Models.Product", b =>
                 {
-                    b.Property<int>("ProductID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("ProductDescription")
+                    b.Property<string>("Item")
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("ProductValue")
+                    b.Property<string>("Value")
                         .HasColumnType("nvarchar(20)");
 
-                    b.HasKey("ProductID");
+                    b.HasKey("ID");
 
                     b.ToTable("Products");
                 });
