@@ -5,3 +5,16 @@
 /.vs
 /Invoices.Test/bin/Debug/net6.0
 /Invoices.Test/obj
+/Invoices.API/obj/Debug/net6.0
+/Invoices.DAL/obj/Debug/net6.0
+/Invoices.DAL/bin/Debug/net6.0
+/Invoices.DTO/bin/Debug/net6.0
+/Invoices.BL/obj/Debug/net6.0
+/Invoices.BL/obj/project.nuget.cache
+/Invoices.BL/obj/project.assets.json
+/Invoices.BL/obj/Invoices.BL.csproj.nuget.g.targets
+/Invoices.BL/obj/Invoices.BL.csproj.nuget.g.props
+/Invoices.BL/obj/Invoices.BL.csproj.nuget.dgspec.json
+/Invoices.DAL/obj
+/Invoices.API/obj
+/Invoices.DTO/obj/Debug/net6.0
