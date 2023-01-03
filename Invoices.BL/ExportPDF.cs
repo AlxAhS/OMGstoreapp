@@ -30,7 +30,7 @@ namespace Invoices.BLL
             string new_Path = desktop_Path + "\\OMG_bills";
             Directory.CreateDirectory(new_Path);
 
-            string fileName = new_Path + "\\OMG_Cuentadecobro_" + Convert.ToString(client.ClientID) + ".pdf";
+            string fileName = new_Path + "\\OMG_Cuentadecobro_" + Convert.ToString(client.ID) + ".pdf";
 
 
             // Must have write permissions to the path folder
@@ -39,7 +39,7 @@ namespace Invoices.BLL
             Document document = new Document(pdf);
 
             Paragraph Text1 = new Paragraph(
-            "Fecha: " + invoice.InvoiceDate+ "\nCuenta de cobro N°: " + invoice.InvoiceNumber)
+            "Fecha: " + invoice.Date+ "\nCuenta de cobro N°: " + invoice.ID)
                .SetTextAlignment(TextAlignment.RIGHT)
                .SetFontSize(10);
 
@@ -56,13 +56,13 @@ namespace Invoices.BLL
 
 
             Paragraph Text2 = new Paragraph("\n" +
-                client.ClientName)
+                client.Name)
                .SetTextAlignment(TextAlignment.CENTER)
                .SetBold()
                .SetFontSize(20);
 
             Paragraph Text3 = new Paragraph(
-                Convert.ToString(client.ClientID))
+                Convert.ToString(client.ID))
                .SetTextAlignment(TextAlignment.CENTER)
                .SetFontSize(12);
 
@@ -85,7 +85,7 @@ namespace Invoices.BLL
             .SetFontSize(12);
 
             Paragraph Text7 = new Paragraph(
-            "La suma de $" + product.ProductValue + " por concepto de " + product.ProductDescription + ".")
+            "La suma de $" + product.Value + " por concepto de " + product.Item + ".")
             .SetTextAlignment(TextAlignment.JUSTIFIED)
             .SetFontSize(12);
 
