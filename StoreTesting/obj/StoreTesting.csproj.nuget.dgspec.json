@@ -1,0 +1,447 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj": {}
+  },
+  "projects": {
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj",
+        "projectName": "Invoices.API",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj",
+        "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj"
+              },
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "itext7.commons": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "itext7.pdfhtml": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj",
+        "projectName": "Invoices.BL",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj",
+        "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj"
+              },
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "itext7.commons": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "itext7.pdfhtml": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj",
+        "projectName": "Invoices.DAL",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj",
+        "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "itext7.commons": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "itext7.pdfhtml": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj",
+        "projectName": "Invoices.DTO",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj",
+        "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "itext7.commons": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "itext7.pdfhtml": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj",
+        "projectName": "StoreTesting",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj",
+        "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj"
+              },
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj"
+              },
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj"
+              },
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
