@@ -18,3 +18,7 @@
 /Invoices.DAL/obj
 /Invoices.API/obj
 /Invoices.DTO/obj/Debug/net6.0
+/Invoices.DTO/obj
+/Invoices.API/bin/Debug/net6.0
+/Invoices.BL/bin/Debug/net6.0
+/Invoices.Helpers

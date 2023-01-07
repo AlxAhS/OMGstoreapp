@@ -1,13 +1,5 @@
-﻿using DAL.Models;
-using Invoices.DAL.Models;
+﻿using Invoices.DAL.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL.DataContext
 {

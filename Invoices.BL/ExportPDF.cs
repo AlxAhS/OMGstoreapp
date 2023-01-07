@@ -1,20 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using iText.Kernel.Pdf.Canvas.Draw;
+﻿using Invoices.DAL.Models;
+using iText.IO.Image;
 using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas.Draw;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
-using iText.IO.Image;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using DAL.Models;
-using DAL.DataContext;
-using Invoices.DAL.Models;
 
 namespace Invoices.BLL
 {
@@ -130,5 +120,11 @@ namespace Invoices.BLL
         }
 
 
+
+        public void GetPath()
+        {
+            //Create a method that returns the path to the export pdf method
+            //Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory);
+        }
     }
 }
