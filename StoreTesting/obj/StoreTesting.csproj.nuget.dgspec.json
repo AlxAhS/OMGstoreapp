@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\OMGstoreapp\\StoreUnitTest\\StoreUnitTest.csproj": {}
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj": {
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj",
         "projectName": "Invoices.API",
-        "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGstoreapp\\Invoices.API\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj"
               },
-              "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
               }
             }
           }
@@ -101,14 +101,14 @@
         }
       }
     },
-    "C:\\Dev\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj",
         "projectName": "Invoices.BL",
-        "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGstoreapp\\Invoices.BL\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -125,11 +125,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj"
               },
-              "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
               }
             }
           }
@@ -187,14 +187,14 @@
         }
       }
     },
-    "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj",
         "projectName": "Invoices.DAL",
-        "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -211,8 +211,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
               }
             }
           }
@@ -274,14 +274,14 @@
         }
       }
     },
-    "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj",
         "projectName": "Invoices.DTO",
-        "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -353,14 +353,14 @@
         }
       }
     },
-    "C:\\Dev\\OMGstoreapp\\StoreUnitTest\\StoreUnitTest.csproj": {
+    "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\StoreUnitTest\\StoreUnitTest.csproj",
-        "projectName": "StoreUnitTest",
-        "projectPath": "C:\\Dev\\OMGstoreapp\\StoreUnitTest\\StoreUnitTest.csproj",
+        "projectUniqueName": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj",
+        "projectName": "StoreTesting",
+        "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\StoreTesting.csproj",
         "packagesPath": "C:\\Users\\work_AhT\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\OMGstoreapp\\StoreUnitTest\\obj\\",
+        "outputPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\StoreTesting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\work_AhT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -377,17 +377,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.API\\Invoices.API.csproj"
               },
-              "C:\\Dev\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.BL\\Invoices.BL.csproj"
               },
-              "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DAL\\Invoices.DAL.csproj"
               },
-              "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
-                "projectPath": "C:\\Dev\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
+              "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj": {
+                "projectPath": "C:\\Dev\\OMGstoreapp\\AlxAhS\\OMGstoreapp\\Invoices.DTO\\Invoices.DTO.csproj"
               }
             }
           }
@@ -406,21 +406,21 @@
               "target": "Package",
               "version": "[17.1.0, )"
             },
-            "NUnit": {
-              "target": "Package",
-              "version": "[3.13.3, )"
-            },
-            "NUnit.Analyzers": {
-              "target": "Package",
-              "version": "[3.3.0, )"
-            },
-            "NUnit3TestAdapter": {
-              "target": "Package",
-              "version": "[4.2.1, )"
-            },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
             }
           },
           "imports": [
