@@ -14,11 +14,6 @@ namespace Invoices.BL
             string invoicePath = GetPath("98715623");
         }
 
-        public void ExportToPDF()
-        {
-
-        }
-
         public string GetPath(string pClientID)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\OMG_bills";
