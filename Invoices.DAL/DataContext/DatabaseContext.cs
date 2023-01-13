@@ -22,6 +22,7 @@ namespace DAL.DataContext
         public DbSet<Client> Clients { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<StoreInfo> _StoreInfo { get; set; }
     
     }
 }
