@@ -5,32 +5,11 @@
 namespace Invoices.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class OMGstoreDB : Migration
+    public partial class StoreDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "_StoreInfo",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    StoreName = table.Column<string>(type: "nvarchar(20)", nullable: true),
-                    NIT = table.Column<string>(type: "nvarchar(12)", nullable: true),
-                    Owner = table.Column<string>(type: "nvarchar(30)", nullable: true),
-                    OwnerDocumentClass = table.Column<string>(type: "nvarchar(15)", nullable: true),
-                    OwnerDocumentNumber = table.Column<string>(type: "nvarchar(12)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(20)", nullable: true),
-                    City = table.Column<string>(type: "nvarchar(16)", nullable: true),
-                    AreaCode = table.Column<string>(type: "nvarchar(20)", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(10)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__StoreInfo", x => x.ID);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Clients",
                 columns: table => new
@@ -75,14 +54,32 @@ namespace Invoices.DAL.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.ID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "StoreInfo",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    StoreName = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    NIT = table.Column<string>(type: "nvarchar(12)", nullable: true),
+                    Owner = table.Column<string>(type: "nvarchar(30)", nullable: true),
+                    OwnerDocumentClass = table.Column<string>(type: "nvarchar(15)", nullable: true),
+                    OwnerDocumentNumber = table.Column<string>(type: "nvarchar(12)", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(16)", nullable: true),
+                    AreaCode = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(10)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StoreInfo", x => x.ID);
+                });
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "_StoreInfo");
-
             migrationBuilder.DropTable(
                 name: "Clients");
 
@@ -91,6 +88,9 @@ namespace Invoices.DAL.Migrations
 
             migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "StoreInfo");
         }
     }
 }

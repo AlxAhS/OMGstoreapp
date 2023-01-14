@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Invoices.DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230113041438_OMGstoreDB")]
-    partial class OMGstoreDB
+    [Migration("20230113225709_StoreDB")]
+    partial class StoreDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -128,7 +128,7 @@ namespace Invoices.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("_StoreInfo");
+                    b.ToTable("StoreInfo");
                 });
 #pragma warning restore 612, 618
         }

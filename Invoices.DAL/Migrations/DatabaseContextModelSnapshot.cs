@@ -125,7 +125,7 @@ namespace Invoices.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("_StoreInfo");
+                    b.ToTable("StoreInfo");
                 });
 #pragma warning restore 612, 618
         }
