@@ -14,10 +14,13 @@ namespace Invoices.DAL.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         [Column(TypeName = "nvarchar(100)")]
-        public string? Item { get; set; }
-        
-        [Column(TypeName = "nvarchar(20)")] 
-        public string? Value { get; set; }
+        public string? Name { get; set; }
+
+        [Column(TypeName = "int")]
+        public int? Quantity { get; set; }
+
+        [Column(TypeName = "int")] 
+        public int? Price { get; set; }
 
     }
 }

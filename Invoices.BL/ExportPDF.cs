@@ -75,7 +75,7 @@ namespace Invoices.BLL
             .SetFontSize(12);
 
             Paragraph Text7 = new Paragraph(
-            "La suma de $" + product.Value + " por concepto de " + product.Item + ".")
+            "La suma de $" + product.Price + " por concepto de " + product.Name + ".")
             .SetTextAlignment(TextAlignment.JUSTIFIED)
             .SetFontSize(12);
 

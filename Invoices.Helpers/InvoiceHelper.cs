@@ -17,26 +17,31 @@ namespace Invoices.Helpers
         private DateTime InvoiceDate;
         private string? Serial;
 
-        private readonly DatabaseContext _context;
-        ClientRepository repo;
+        private readonly DatabaseContext _clientContext;
+        ClientRepository clientRepo;
+
+
+        private readonly DatabaseContext _productContext;
+        ProductRepository productRepo;
 
         public InvoiceHelper(DAL.Models.Invoice invoice)
         {
-            repo = new ClientRepository(_context);
+            clientRepo = new ClientRepository(_clientContext);
             InvoiceID = invoice.ID;
+            productRepo = new ProductRepository(_productContext);
             InvoiceDate = invoice.Date;
             Serial = invoice.Serial;
         }
 
-        public void GenerateInvoice(string pFilename, int pClientID)
+        public Document GenerateInvoice(string pFilename, int pClientID, int pProductId)
         {
             // Must have write permissions to the path folder
             PdfWriter writer = new PdfWriter(pFilename);
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-            Client client = repo.GetClient(pClientID);
-            //Product product = repo.GetProduct(pProductID);
+            Client client = clientRepo.GetClient(pClientID);
+            Product product = productRepo.GetbyId(pProductId);
 
             Paragraph Text1 = new Paragraph(
             "Fecha: " + InvoiceDate + "\nCuenta de cobro N°: " + InvoiceID)
@@ -85,8 +90,8 @@ namespace Invoices.Helpers
             .SetFontSize(12);
 
             Paragraph Text7 = new Paragraph(
-            "La suma de $")
-            //"La suma de $" + product.Value + " por concepto de " + product.Item + ".")
+            //"La suma de $")
+            "La suma de $" + product.Price + " por concepto de " + product.Name + ".")
             .SetTextAlignment(TextAlignment.JUSTIFIED)
             .SetFontSize(12);
 
@@ -128,6 +133,7 @@ namespace Invoices.Helpers
             document.Add(img);
             document.Add(Text12);
             document.Close();
+            return document;
         }
     }
 }
