@@ -5,9 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
-//                                              !!!!!!!!
-// This controller collect data from <client> <invoice> <product> and <storeinfo> tables, therefore data is available for generate the invoice document or any other document. 
-
+/*                                              !!!!
+// This controller collect data from <client> <invoice> <product> and <storeinfo> tables, therefore data is available for generate the invoice document or any other document.  
+   
+   Alx.AhS
+*/
 
 namespace Invoices.API.Controllers
 {
@@ -55,7 +57,6 @@ namespace Invoices.API.Controllers
 
             return storeInfo;
         }
-
-
+         
     }
 }
