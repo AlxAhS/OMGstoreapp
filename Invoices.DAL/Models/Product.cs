@@ -22,5 +22,9 @@ namespace Invoices.DAL.Models
         [Column(TypeName = "int")] 
         public int? Price { get; set; }
 
+        public static explicit operator Task<object>(Product v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
