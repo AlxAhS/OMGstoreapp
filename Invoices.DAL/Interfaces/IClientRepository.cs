@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Invoices.DAL.Interfaces
 {
-    public interface IClienteRepository
+    public interface IClientRepository
     {
         IEnumerable<Client> GetAll();
 
