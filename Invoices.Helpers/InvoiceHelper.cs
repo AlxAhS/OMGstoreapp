@@ -40,7 +40,7 @@ namespace Invoices.Helpers
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-            Client client = clientRepo.GetClient(pClientID);
+            Client client = clientRepo.GetbyId(pClientID);
             Product product = productRepo.GetbyId(pProductId);
 
             Paragraph Text1 = new Paragraph(
