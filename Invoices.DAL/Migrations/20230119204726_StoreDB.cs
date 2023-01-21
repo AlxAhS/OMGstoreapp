@@ -47,8 +47,9 @@ namespace Invoices.DAL.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Item = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    Value = table.Column<string>(type: "nvarchar(20)", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    Quantity = table.Column<int>(type: "int", nullable: true),
+                    Price = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

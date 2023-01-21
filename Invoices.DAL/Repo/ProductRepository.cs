@@ -13,11 +13,11 @@ namespace Invoices.DAL.Repo
     public class ProductRepository: IProductRepository
     {
         private readonly DatabaseContext _context;
+
         public ProductRepository(DatabaseContext context)
         {
             _context = context;
         }
-
 
         public IEnumerable<Product> GetAll()
         {

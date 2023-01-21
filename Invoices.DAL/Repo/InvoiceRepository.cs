@@ -1,4 +1,5 @@
 ﻿using DAL.DataContext;
+using Invoices.DAL.Interfaces;
 using Invoices.DAL.Models;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Invoices.DAL.Repo
 {
-    public class InvoiceRepository
+    public class InvoiceRepository : IInvoiceRepository
     {
         private readonly DatabaseContext _context;
 
@@ -18,14 +19,46 @@ namespace Invoices.DAL.Repo
             _context = context;
         }
 
-        public IEnumerable<Invoice> GetInvoices()
+        public IEnumerable<Invoice> GetAll()
         {
             return _context.Invoices;
         }
 
-        public Invoice GetInvoice(int Id)
+        public Invoice GetbyId(int id)
         {
-            return _context.Invoices.Find(Id);
+            return _context.Invoices.Find(id);
         }
+        public Invoice Add(Invoice entity)
+        {
+            throw new NotImplementedException();
+        }
+        public Invoice Update(int id)
+        {
+            throw new NotImplementedException();
+        }
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /*
+
+       **************************************************************************
+                                       !!!!
+       The next two methods included in the interface can be deleted or modified 
+       Alx.AhS
+       **************************************************************************
+
+       public IEnumerable<Invoice> GetInvoices()
+       {
+           return _context.Invoices;
+       }
+
+       public Invoice GetInvoice(int Id)
+       {
+           return _context.Invoices.Find(Id);
+       }
+
+        */
     }
 }

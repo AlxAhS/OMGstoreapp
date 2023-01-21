@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 
 namespace Invoices.DAL.Interfaces
 {
-    internal interface IInvoiceRepository
+    public interface IClientRepository
     {
-        IEnumerable<Invoice> GetAll();
-        Invoice GetbyId(int id);
-        Invoice Add(Invoice entity);
-        Invoice Update(int id);
+        IEnumerable<Client> GetAll();
+
+        Client GetbyId(int id);
+
+        Client Add(Client entity);
+
+        Client Update(int id);
+
         void Delete(int id);
 
     }

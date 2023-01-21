@@ -9,6 +9,10 @@ namespace Invoices.BL.Interfaces
 {
     internal interface IClientBL
     {
-
+        IEnumerable<Client> GetAll();
+        Client GetbyId(int id);
+        Client Add(Client entity);
+        Client Update(int id);
+        void Delete(int id);
     }
 }
