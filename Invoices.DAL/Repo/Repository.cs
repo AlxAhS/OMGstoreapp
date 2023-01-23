@@ -10,19 +10,22 @@ namespace Invoices.DAL.Repo
     public class Repository<T> : IRepository<T>, IDisposable where T : class
     {
         private readonly DatabaseContext context;
-        private readonly DbSet<T> entitySet;
+        //private readonly DbSet<T> entitySet;
         public Repository(DatabaseContext dbContext)
         {
             context = dbContext;
-            entitySet = context.Set<T>();
+            
         }
 
-        //public Repository(DbContextOptions<T> options) : base(options))
-        //{
+        protected DbSet<T> entitySet
+        {
+            get
+            {
+                return context.Set<T>();
+            }
+        }
 
-        //}
 
-        
 
         public async Task<IEnumerable<T>> GetAll()
         {

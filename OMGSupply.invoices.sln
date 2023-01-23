@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33103.184
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.DAL", "Invoices.DAL\Invoices.DAL.csproj", "{81F418E5-009B-4593-A3E9-4523137BDDAA}"
 EndProject
@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.Test", "Invoices.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.Helpers", "Invoices.Helpers\Invoices.Helpers.csproj", "{5151F2E7-048A-4925-8389-0D7BF78808A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaDummy", "CaDummy\CaDummy.csproj", "{F86DAA16-22B2-4B92-9A88-B727352B64A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaDummy", "CaDummy\CaDummy.csproj", "{F86DAA16-22B2-4B92-9A88-B727352B64A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

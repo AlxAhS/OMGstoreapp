@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Compile Remove="DataContext\AppConfiguration.cs" />
-    <Compile Remove="DependencyInjection.cs" />
   </ItemGroup>
 
   <ItemGroup>

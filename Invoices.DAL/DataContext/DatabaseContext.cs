@@ -6,9 +6,6 @@ namespace DAL.DataContext
 
     public class DatabaseContext : DbContext
     {
-
-       
-
         public DatabaseContext()
         {
         }
