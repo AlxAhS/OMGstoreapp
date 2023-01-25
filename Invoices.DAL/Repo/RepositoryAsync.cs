@@ -7,11 +7,11 @@ using System.Linq.Expressions;
 
 namespace Invoices.DAL.Repo
 {
-    public class Repository<T> : IRepository<T>, IDisposable where T : class
+    public class RepositoryAsync<T> : IRepositoryAsync<T> where T : class
     {
         private readonly DatabaseContext context;
         //private readonly DbSet<T> entitySet;
-        public Repository(DatabaseContext dbContext)
+        public RepositoryAsync(DatabaseContext dbContext)
         {
             context = dbContext;
             
@@ -52,11 +52,12 @@ namespace Invoices.DAL.Repo
             return entity;
         }
 
-        public async Task Update(T entity)
+        public async Task<T> Update(T entity)
         {
             entitySet.Attach(entity);
             context.Entry(entity).State = EntityState.Modified;
             await Save();
+            return entity;
         }
 
         public async Task Save()
@@ -70,10 +71,12 @@ namespace Invoices.DAL.Repo
             return await entitySet.AsNoTracking().FirstOrDefaultAsync(expr);
         }
 
-        public void Dispose()
-        {
-            Dispose();
-            GC.SuppressFinalize(this);
-        }
+
+        //need to find a way this method doesn't crash the app
+        //public void Dispose()
+        //{
+        //    Dispose(true);
+        //    GC.SuppressFinalize(this);
+        //}
     }
 }

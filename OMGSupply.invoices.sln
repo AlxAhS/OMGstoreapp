@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32510.428
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.DAL", "Invoices.DAL\Invoices.DAL.csproj", "{81F418E5-009B-4593-A3E9-4523137BDDAA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.API", "Invoices.API\Invoices.API.csproj", "{F7DA81AE-17D7-46D2-879F-3FA021B74807}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.BL", "Invoices.BL\Invoices.BL.csproj", "{0FCED1F0-D41F-42D7-9F50-2E908D8A4355}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.DTO", "Invoices.DTO\Invoices.DTO.csproj", "{CAE22D5E-88C5-41CB-B5D5-CF755A50F31C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices.Test", "Invoices.Test\Invoices.Test.csproj", "{FE48045B-A17D-4B1E-B9EF-187C5D06598A}"
 EndProject
@@ -35,10 +33,6 @@ Global
 		{0FCED1F0-D41F-42D7-9F50-2E908D8A4355}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCED1F0-D41F-42D7-9F50-2E908D8A4355}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FCED1F0-D41F-42D7-9F50-2E908D8A4355}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CAE22D5E-88C5-41CB-B5D5-CF755A50F31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAE22D5E-88C5-41CB-B5D5-CF755A50F31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CAE22D5E-88C5-41CB-B5D5-CF755A50F31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CAE22D5E-88C5-41CB-B5D5-CF755A50F31C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE48045B-A17D-4B1E-B9EF-187C5D06598A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FE48045B-A17D-4B1E-B9EF-187C5D06598A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE48045B-A17D-4B1E-B9EF-187C5D06598A}.Release|Any CPU.ActiveCfg = Release|Any CPU

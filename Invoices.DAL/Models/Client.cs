@@ -20,10 +20,10 @@ namespace Invoices.DAL.Models
         public string? Name { get; set; }
 
         [Column(TypeName = "nvarchar(6)")]
-        public string? DocumentClass { get; set; }
+        public string? IdType { get; set; }
 
         [Column(TypeName = "nvarchar(25)")]
-        public string? DocumentNumber { get; set; }
+        public string? IDNumber { get; set; }
 
         [Column(TypeName = "nvarchar(40)")]
         public string? Email{ get; set; }

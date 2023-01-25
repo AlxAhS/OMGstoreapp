@@ -5,7 +5,7 @@
 namespace Invoices.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class StoreDB : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,8 +17,8 @@ namespace Invoices.DAL.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    DocumentClass = table.Column<string>(type: "nvarchar(6)", nullable: true),
-                    DocumentNumber = table.Column<string>(type: "nvarchar(25)", nullable: true),
+                    IdType = table.Column<string>(type: "nvarchar(6)", nullable: true),
+                    IDNumber = table.Column<string>(type: "nvarchar(25)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(40)", nullable: true),
                     PhoneNumber = table.Column<string>(type: "nvarchar(12)", nullable: true)
                 },
@@ -48,7 +48,6 @@ namespace Invoices.DAL.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    Quantity = table.Column<int>(type: "int", nullable: true),
                     Price = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -62,15 +61,13 @@ namespace Invoices.DAL.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StoreName = table.Column<string>(type: "nvarchar(20)", nullable: true),
-                    NIT = table.Column<string>(type: "nvarchar(12)", nullable: true),
-                    Owner = table.Column<string>(type: "nvarchar(30)", nullable: true),
-                    OwnerDocumentClass = table.Column<string>(type: "nvarchar(15)", nullable: true),
-                    OwnerDocumentNumber = table.Column<string>(type: "nvarchar(12)", nullable: true),
+                    NIT = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    OwnerName = table.Column<string>(type: "nvarchar(30)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     City = table.Column<string>(type: "nvarchar(16)", nullable: true),
-                    AreaCode = table.Column<string>(type: "nvarchar(20)", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(10)", nullable: true)
+                    State = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    AccountNumber = table.Column<string>(type: "nvarchar(20)", nullable: true)
                 },
                 constraints: table =>
                 {

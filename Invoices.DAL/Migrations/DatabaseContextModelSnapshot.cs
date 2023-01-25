@@ -17,7 +17,7 @@ namespace Invoices.DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -30,14 +30,14 @@ namespace Invoices.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("DocumentClass")
-                        .HasColumnType("nvarchar(6)");
-
-                    b.Property<string>("DocumentNumber")
-                        .HasColumnType("nvarchar(25)");
-
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(40)");
+
+                    b.Property<string>("IDNumber")
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<string>("IdType")
+                        .HasColumnType("nvarchar(6)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(100)");
@@ -84,9 +84,6 @@ namespace Invoices.DAL.Migrations
                     b.Property<int?>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Quantity")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
                     b.ToTable("Products");
@@ -100,31 +97,25 @@ namespace Invoices.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("Address")
+                    b.Property<string>("AccountNumber")
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("AreaCode")
+                    b.Property<string>("Address")
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(16)");
 
                     b.Property<string>("NIT")
-                        .HasColumnType("nvarchar(12)");
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("Owner")
+                    b.Property<string>("OwnerName")
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("OwnerDocumentClass")
-                        .HasColumnType("nvarchar(15)");
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("OwnerDocumentNumber")
-                        .HasColumnType("nvarchar(12)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("StoreName")
+                    b.Property<string>("State")
                         .HasColumnType("nvarchar(20)");
 
                     b.HasKey("ID");

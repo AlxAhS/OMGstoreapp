@@ -16,15 +16,7 @@ namespace Invoices.DAL.Models
         [Column(TypeName = "nvarchar(100)")]
         public string? Name { get; set; }
 
-        [Column(TypeName = "int")]
-        public int? Quantity { get; set; }
-
         [Column(TypeName = "int")] 
         public int? Price { get; set; }
-
-        public static explicit operator Task<object>(Product v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
