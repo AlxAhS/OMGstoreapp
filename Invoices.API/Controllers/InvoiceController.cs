@@ -1,7 +1,12 @@
 ﻿using DAL.DataContext;
+using Invoices.BL;
+using Invoices.DAL.Interfaces;
 using Invoices.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using static iText.IO.Util.IntHashtable;
 
 
 namespace Invoices.API.Controllers
@@ -10,117 +15,47 @@ namespace Invoices.API.Controllers
     [ApiController]
     public class InvoiceController : ControllerBase
     {
-        private readonly DatabaseContext _contextInv;
+		private readonly IRepositoryAsync<Invoice> _repo;
 
-        public InvoiceController(DatabaseContext context)
+		public InvoiceController(IRepositoryAsync<Invoice> repository)
         {
-            _contextInv = context;
-        }
+			_repo = repository;
+		}
 
         // GET: api/Invoices
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Invoice>>> GetInvoices()
+        public async Task<IEnumerable<Invoice>> GetInvoices()
         {
-            if (_contextInv.Invoices == null)
-            {
-                return NotFound();
-            }
-            return await _contextInv.Invoices.ToListAsync();
+            return await _repo.GetAll();
         }
 
         // GET: api/Invoices/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Invoice>> GetInvoice(int id)
-        {
-            if (_contextInv.Invoices == null)
-            {
-                return NotFound();
-            }
-            var invoiceInfo = await _contextInv.Invoices.FindAsync(id);
-
-            if (invoiceInfo == null)
-            {
-                return NotFound();
-            }
-
-            return invoiceInfo;
-        }
-
-        // PUT: api/Invoices/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutInvoice(int id, Invoice invoiceInfo)
-        {
-            if (id != invoiceInfo.ID)
-            {
-                return BadRequest();
-            }
-
-            _contextInv.Entry(invoiceInfo).State = EntityState.Modified;
-
-            try
-            {
-                await _contextInv.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!InvoiceExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            return NoContent();
-        }
-
+        public async Task<Invoice> GetInvoice(int id)
+		{
+			return await _repo.GetbyId(id);
+		}
 
         // POST: api/Invoices
         [HttpPost]
-        public async Task<ActionResult<Invoice>> PostInvoice(Invoice invoiceInfo)
-        {
-            if (_contextInv.Invoices == null)
-            {
-                return Problem("Entity set 'DatabaseContext.Invoices'  is null.");
-            }
-             
-            invoiceInfo.Date = DateTime.Now;
+        public async Task<Invoice> PostInvoice(Invoice entity)
+		{
+			return await _repo.Add(entity);
+		}
 
-            _contextInv.Invoices.Add(invoiceInfo);
-            await _contextInv.SaveChangesAsync();
+		// PUT: api/Invoices/5
+		[HttpPut("{id}")]
+        public async Task<Invoice> UpdateInvoice(Invoice entity)
+		{
+			return await _repo.Update(entity);
+		}
 
-            return CreatedAtAction(
-                "GetInvoices", 
-                new { id = invoiceInfo.ID, datetime = invoiceInfo.Date},
-                invoiceInfo);
-        }
+		// DELETE: api/Invoices/5
+		[HttpDelete("{id}")]
+		public async Task<Invoice> Delete(int id)
+		{
+			return await _repo.Delete(id);
+		}
 
-
-        // DELETE: api/Invoices/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteInvoice(int id)
-        {
-            if (_contextInv.Invoices == null)
-            {
-                return NotFound();
-            }
-            var invoices = await _contextInv.Invoices.FindAsync(id);
-            if (invoices == null)
-            {
-                return NotFound();
-            }
-
-            _contextInv.Invoices.Remove(invoices);
-            await _contextInv.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool InvoiceExists(int id)
-        {
-            return (_contextInv.Invoices?.Any(e => e.ID== id)).GetValueOrDefault();
-        }
-
-    }
+	}
 }

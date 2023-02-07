@@ -1,9 +1,11 @@
 ﻿using DAL.DataContext;
+using Invoices.BL;
+using Invoices.DAL.Interfaces;
 using Invoices.DAL.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Invoices.API.Controllers
 {
@@ -11,110 +13,47 @@ namespace Invoices.API.Controllers
     [ApiController]
     public class StoreInfoController : ControllerBase
     {
-        private readonly DatabaseContext _contextStore;
+		private readonly IRepositoryAsync<StoreInfo> _repo;
 
-        public StoreInfoController(DatabaseContext storecontext) 
+		public StoreInfoController(IRepositoryAsync<StoreInfo> repository) 
         {
-            _contextStore = storecontext;
-        }
+			 _repo = repository;
+		}
 
         // GET: api/StoreInfo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<StoreInfo>>> GetAllStoreInfo()
-        {
-            if (_contextStore.StoreInfo == null)
-            {
-                return NotFound();
-            }
-            return await _contextStore.StoreInfo.ToListAsync();
-        }
+		public async Task<IEnumerable<StoreInfo>> GetAllStoreInfo()
+		{
+			return await _repo.GetAll();
+		}
 
-        // GET: api/StoreInfo/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<StoreInfo>> GetStoreInfo(int id)
-        {
-            if (_contextStore.StoreInfo== null)
-            {
-                return NotFound();
-            }
-            var storeInfo = await _contextStore.StoreInfo.FindAsync(id);
-
-            if (storeInfo == null)
-            {
-                return NotFound();
-            }
-
-            return storeInfo;
-        }
-
-        // PUT: api/StoreInfo/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStoreInfo(int id, StoreInfo storeInfo)
-        {
-            if (id != storeInfo.ID)
-            {
-                return BadRequest();
-            }
-
-            _contextStore.Entry(storeInfo).State = EntityState.Modified;
-
-            try
-            {
-                await _contextStore.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StoreInfoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            return NoContent();
-        }
+		// GET: api/StoreInfo/5
+		[HttpGet("{id}")]
+		public async Task<StoreInfo> GetStoreInfo(int id)
+		{
+			return await _repo.GetbyId(id);
+		}
 
         // POST: api/StoreInfo
         [HttpPost]
-        public async Task<ActionResult<StoreInfo>> PostStoreInfo(StoreInfo storeInfo)
-        {
-            if (_contextStore.StoreInfo == null)
-            {
-                return Problem("Entity set 'DatabaseContext.StoreInfo'  is null.");
-            }
-            _contextStore.StoreInfo.Add(storeInfo);
-            await _contextStore.SaveChangesAsync();
+		public async Task<StoreInfo> InsertStoreInfo(StoreInfo entity)
+		{
+			return await _repo.Add(entity);
+		}
 
-            return CreatedAtAction("GetStoreInfo", new { id = storeInfo.ID}, storeInfo);
-        }
+		// PUT: api/StoreInfo/5
+		[HttpPut("{id}")]
+		public async Task<StoreInfo> Update(StoreInfo entity)
+		{
+			return await _repo.Update(entity);
+		}
 
+		// DELETE: api/StoreInfo/5
+		[HttpDelete("{id}")]
+		public async Task<StoreInfo> Delete(int id)
+		{
+			return await _repo.Delete(id);
+		}
 
-        // DELETE: api/StoreInfo/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStoreInfo(int id)
-        {
-            if (_contextStore.StoreInfo == null)
-            {
-                return NotFound();
-            }
-            var storeInfo = await _contextStore.StoreInfo.FindAsync(id);
-            if (storeInfo == null)
-            {
-                return NotFound();
-            }
-
-            _contextStore.StoreInfo.Remove(storeInfo);
-            await _contextStore.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool StoreInfoExists(int id)
-        {
-            return (_contextStore.StoreInfo?.Any(e => e.ID == id)).GetValueOrDefault();
-        }
-
-    }
+	}
 }

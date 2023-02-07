@@ -39,26 +39,6 @@ namespace Invoices.DAL.Repo
         {
             throw new NotImplementedException();
         }
-
-        /*
-        
-        **************************************************************************
-                                        !!!!
-        The next two methods included in the interface can be deleted or modified 
-        Alx.AhS
-        **************************************************************************
-
-        public Client GetClient (int Id)
-        {
-            return _context.Clients.Find(Id);
-        }
-
-        public IEnumerable<Client> GetClients()
-        {
-            return _context.Clients;
-        }
-
-        */
-
+         
     }
 }

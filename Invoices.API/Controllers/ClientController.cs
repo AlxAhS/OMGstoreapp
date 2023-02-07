@@ -1,8 +1,11 @@
 ﻿using DAL.DataContext;
+using Invoices.BL;
+using Invoices.DAL.Interfaces;
 using Invoices.DAL.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 
 namespace Invoices.API.Controllers
@@ -11,115 +14,47 @@ namespace Invoices.API.Controllers
     [ApiController]
     public class ClientController : ControllerBase
     {
-        private readonly DatabaseContext _contextCli;
+		private readonly IRepositoryAsync<Client> _repo;
 
-        public ClientController(DatabaseContext clientContext) 
+		public ClientController(IRepositoryAsync<Client> repository   ) 
         {
-            _contextCli = clientContext;
-        }
+			_repo = repository;
+		}
 
         // GET: api/Clients
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Client>>> GetClients()
-        {
-            if (_contextCli.Clients == null)
-            {
-                return NotFound();
-            }
-            return await _contextCli.Clients.ToListAsync();
-        }
+		public async Task<IEnumerable<Client>> GetClients()
+		{
+			return await _repo.GetAll();
+		}
 
-        // GET: api/Clients/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Client>> GetClient(int id)
-        {
-            if (_contextCli.Clients == null)
-            {
-                return NotFound();
-            }
-            var clientInfo = await _contextCli.Clients.FindAsync(id);
+		// GET: api/Clients/5
+		[HttpGet("{id}")]
+        public async Task<Client> GetClient(int id)
+		{
+			return await _repo.GetbyId(id);
+		}
 
-            if (clientInfo == null)
-            {
-                return NotFound();
-            }
+		// POST: api/Clients
+		[HttpPost]
+		public async Task<Client> PostClient(Client entity)
+		{
+			return await _repo.Add(entity);
+		}
 
-            return clientInfo;
-        }
+		// PUT: api/Clients/5
+		[HttpPut("{id}")]
+		public async Task<Client> Update(Client entity)
+		{
+			return await _repo.Update(entity);
+		}
 
-        // PUT: api/Clients/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutClient(int id, Client clientInfo)
-        {
-            if (id != clientInfo.ID)
-            {
-                return BadRequest();
-            }
+		// DELETE: api/Clients/5
+		[HttpDelete("{id}")]
+		public async Task<Client> Delete(int id)
+		{
+			return await _repo.Delete(id);
+		}
 
-            _contextCli.Entry(clientInfo).State = EntityState.Modified;
-
-            try
-            {
-                await _contextCli.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ClientExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            return NoContent();
-        }
-
-        //enum SelectDocument
-        //{ CC, CE, TI, RC, Passport, NIT, Other, };
-
-        // POST: api/Clients
-        [HttpPost]
-        public async Task<ActionResult<Client>> PostClient(Client clientInfo)
-        {
-            if (_contextCli.Clients == null)
-            {
-                return Problem("Entity set 'DatabaseContext.Clients'  is null.");
-            }
-            _contextCli.Clients.Add(clientInfo);
-            await _contextCli.SaveChangesAsync();
-
-            //clientInfo.DocumentType = SelectDocument();
-
-            return CreatedAtAction("GetClients", new { id = clientInfo.ID, /*document = clientInfo.DocumentType*/ }, clientInfo);
-        }
-
-
-        // DELETE: api/Clients/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteClient(int id)
-        {
-            if (_contextCli.Clients == null)
-            {
-                return NotFound();
-            }
-            var client = await _contextCli.Clients.FindAsync(id);
-            if (client == null)
-            {
-                return NotFound();
-            }
-
-            _contextCli.Clients.Remove(client);
-            await _contextCli.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool ClientExists(int id)
-        {
-            return (_contextCli.Clients?.Any(e => e.ID == id)).GetValueOrDefault();
-        }
-
-    }
+	}
 }
