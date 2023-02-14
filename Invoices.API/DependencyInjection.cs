@@ -13,6 +13,7 @@ namespace Invoices.API
         {
             //services.AddScoped<IRepository<Product>, Repository<Product>>();
             services.AddScoped(typeof(IRepositoryAsync<Product>), typeof(RepositoryAsync<Product>));
+            services.AddScoped(typeof(IRepositoryAsync<Client>), typeof(RepositoryAsync<Client>));
             services.AddDbContext<DatabaseContext>(opt =>
             {
                 opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
