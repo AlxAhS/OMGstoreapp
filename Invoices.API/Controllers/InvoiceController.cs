@@ -11,7 +11,7 @@ using static iText.IO.Util.IntHashtable;
 
 namespace Invoices.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[Controller]")]
     [ApiController]
     public class InvoiceController : ControllerBase
     {

@@ -9,9 +9,9 @@ namespace Invoices.DAL.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         [Column(TypeName = "nvarchar(30)")]
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.UtcNow;
 
-        [Column(TypeName = "nvarchar(10)")]
+		[Column(TypeName = "nvarchar(10)")]
         public string? Serial { get; set; }
 
         

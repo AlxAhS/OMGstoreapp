@@ -14,6 +14,8 @@ namespace Invoices.API
             //services.AddScoped<IRepository<Product>, Repository<Product>>();
             services.AddScoped(typeof(IRepositoryAsync<Product>), typeof(RepositoryAsync<Product>));
             services.AddScoped(typeof(IRepositoryAsync<Client>), typeof(RepositoryAsync<Client>));
+            services.AddScoped(typeof(IRepositoryAsync<Invoice>), typeof(RepositoryAsync<Invoice>));
+            services.AddScoped(typeof(IRepositoryAsync<StoreInfo>), typeof(RepositoryAsync<StoreInfo>));
             services.AddDbContext<DatabaseContext>(opt =>
             {
                 opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));

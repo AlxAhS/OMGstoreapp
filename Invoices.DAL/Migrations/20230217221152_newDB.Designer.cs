@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Invoices.DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230125001931_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230217221152_newDB")]
+    partial class newDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
