@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Invoices.DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230217221152_newDB")]
-    partial class newDB
+    [Migration("20230219165843_SeedingData")]
+    partial class SeedingData
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,35 @@ namespace Invoices.DAL.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Clients");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Email = "juan@gmail.com",
+                            IDNumber = "232131",
+                            IdType = "CC",
+                            Name = "Juan",
+                            PhoneNumber = "0644445532"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Email = "pedro@gmail.com",
+                            IDNumber = "45423498",
+                            IdType = "CC",
+                            Name = "Pedro",
+                            PhoneNumber = "06432324884"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Email = "alberto@gmail.com",
+                            IDNumber = "2349895-2",
+                            IdType = "CE",
+                            Name = "Alberto",
+                            PhoneNumber = "3117758739"
+                        });
                 });
 
             modelBuilder.Entity("Invoices.DAL.Models.Invoice", b =>
@@ -71,6 +100,26 @@ namespace Invoices.DAL.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Invoices");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Date = "2023-02-19 16:58:43.2661354",
+                            Serial = "234234342"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Date = "2023-02-19 16:58:43.2661358",
+                            Serial = "3423432422"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Date = "2023-02-19 16:58:43.2661361",
+                            Serial = "878342223"
+                        });
                 });
 
             modelBuilder.Entity("Invoices.DAL.Models.Product", b =>
@@ -90,6 +139,26 @@ namespace Invoices.DAL.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Name = "Cellphone",
+                            Price = 450000
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Name = "PlayStation 4",
+                            Price = 2000000
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Name = "Laptop",
+                            Price = 3000000
+                        });
                 });
 
             modelBuilder.Entity("Invoices.DAL.Models.StoreInfo", b =>
@@ -124,6 +193,19 @@ namespace Invoices.DAL.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("StoreInfo");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            AccountNumber = "4560393234289",
+                            Address = "Av Siempre Viva 123",
+                            City = "Springfield",
+                            NIT = "98712311-3",
+                            OwnerName = "Jhon Smith",
+                            Phone = "3134435498",
+                            State = "Columbia"
+                        });
                 });
 #pragma warning restore 612, 618
         }

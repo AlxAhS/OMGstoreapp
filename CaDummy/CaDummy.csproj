@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Invoices.BL\Invoices.BL.csproj" />
   </ItemGroup>
 

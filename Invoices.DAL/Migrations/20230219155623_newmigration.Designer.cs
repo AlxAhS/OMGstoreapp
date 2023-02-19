@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Invoices.DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230217222940_datetimeUTC")]
-    partial class datetimeUTC
+    [Migration("20230219155623_newmigration")]
+    partial class newmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

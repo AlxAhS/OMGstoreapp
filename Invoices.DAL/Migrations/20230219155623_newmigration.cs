@@ -5,7 +5,7 @@
 namespace Invoices.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class newDB : Migration
+    public partial class newmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
