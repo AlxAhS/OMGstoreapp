@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Invoices.DAL.Models;
 using Microsoft.Identity.Client;
+//using Invoices.API.Controllers.ProductController;
 
 namespace OMGSupplyStoreApp.Data
 {
