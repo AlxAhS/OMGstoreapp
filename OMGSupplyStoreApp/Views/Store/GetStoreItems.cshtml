@@ -1,0 +1,25 @@
+﻿@model Invoices.DAL.Models.Product
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<div style="width:90%;margin:auto" class="mt-2">
+        <h5>Store Items</h5>
+        <table class="table table-striped">
+            <tr>
+                <th>Product</th>
+                <th>Unit Price(USD)</th>
+                <th>Action</th>
+            </tr>
+            @foreach (var item in Model.Name)
+            {
+                <tr>
+                    <td>@item</td>
+                   
+                </tr>
+            }
+        </table>
+         
+        
+ 
+</div>

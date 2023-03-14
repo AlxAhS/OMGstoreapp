@@ -17,7 +17,7 @@ namespace Invoices.DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.2")
+                .HasAnnotation("ProductVersion", "7.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -102,19 +102,19 @@ namespace Invoices.DAL.Migrations
                         new
                         {
                             ID = 1,
-                            Date = "2023-02-19 16:58:43.2661354",
+                            Date = "2023-03-07 21:47:23.42321",
                             Serial = "234234342"
                         },
                         new
                         {
                             ID = 2,
-                            Date = "2023-02-19 16:58:43.2661358",
+                            Date = "2023-03-07 21:47:23.4232103",
                             Serial = "3423432422"
                         },
                         new
                         {
                             ID = 3,
-                            Date = "2023-02-19 16:58:43.2661361",
+                            Date = "2023-03-07 21:47:23.4232106",
                             Serial = "878342223"
                         });
                 });

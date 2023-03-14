@@ -12,11 +12,8 @@ namespace Invoices.DAL.Interfaces
         IEnumerable<Client> GetAll();
 
         Client GetbyId(int id);
-
         Client Add(Client entity);
-
         Client Update(int id);
-
         void Delete(int id);
 
     }
